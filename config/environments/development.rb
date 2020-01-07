@@ -40,6 +40,7 @@ Rails.application.configure do
   ## settings for mailgungem # nned to disable above delivery_method settings.
 
   config.action_mailer.delivery_method = :mailgun
+  
   config.action_mailer.mailgun_settings = {
     api_key: ENV["MAILGUN_APIKEY"],
     domain: ENV["MAILGUN_DOMAIN"],
