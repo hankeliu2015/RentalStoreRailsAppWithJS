@@ -39,6 +39,4 @@ class NotifyMailer < ApplicationMailer
     )
   end
 
-
-
 end
