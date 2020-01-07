@@ -37,7 +37,7 @@ Rails.application.configure do
 
   # config.action_mailer.delivery_method = :smtp
 
-  ## settings for mailgungem # disable above delivery_method settings.
+  ## settings for mailgungem # nned to disable above delivery_method settings.
 
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
