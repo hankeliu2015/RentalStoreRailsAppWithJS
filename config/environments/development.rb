@@ -35,18 +35,26 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :smtp
+
+  ## settings for mailgungem # disable above delivery_method settings.
+
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV["MAILGUN_APIKEY"],
+    domain: ENV["MAILGUN_DOMAIN"],
+  }
 
   ## SMTP settings for Mailgun
 
-  ActionMailer::Base.smtp_settings = {
-    port: 587,
-    address: "smtp.mailgun.org",
-    domain: ENV["MAILGUN_DOMAIN"],
-    user_name: ENV["MAILGUN_USERNAME"],
-    password: ENV["MAILGUN_PASSWORD"],
-    authentication: 'plain',
-  }
+  # ActionMailer::Base.smtp_settings = {
+  #   port: 587,
+  #   address: "smtp.mailgun.org",
+  #   domain: ENV["MAILGUN_DOMAIN"],
+  #   user_name: ENV["MAILGUN_USERNAME"],
+  #   password: ENV["MAILGUN_PASSWORD"],
+  #   authentication: 'plain',
+  # }
 
   # SMTP setting from storeappnotifier@gmail account:
 
