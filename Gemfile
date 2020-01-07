@@ -56,6 +56,7 @@ group :development, :test do
   gem 'pry'
   gem 'thin'
   gem 'rb-readline'
+  gem 'mailgun-ruby', '~>1.1.6'
 end
 
 group :development do
